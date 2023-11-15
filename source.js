@@ -17,7 +17,7 @@ characterDivEng.innerHTML = stringEng;
 function draw() {
     progressBarChin.value = countChin;
     progressBarEng.value = countEng;
-    for(int j = 0; j < 4; j++)
+    for(var j = 0; j < 4; j++)
     {
         if (i < 0x2FA1D && chin) {
             i++;
@@ -77,7 +77,7 @@ function draw() {
             characterDivChin.innerHTML = stringChin;
         }
     }
-    for(int j = 0; j < 4; j++){
+    for(var j = 0; j < 4; j++){
         if (j < 0xFF5A && eng) {
             j++;
             countEng++;
