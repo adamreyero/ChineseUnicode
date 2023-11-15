@@ -17,8 +17,7 @@ characterDivEng.innerHTML = stringEng;
 function draw() {
     progressBarChin.value = countChin;
     progressBarEng.value = countEng;
-    for(var j = 0; j < 4; j++)
-    {
+    for (var x = 0; x < 4; x++) {
         if (i < 0x2FA1D && chin) {
             i++;
             countChin++;
@@ -66,18 +65,17 @@ function draw() {
                     i = 0x2F800;
                     break;
             }
-            else{
-                break;
-            }
             if (stringChin.length > 500) {
-                //stringChin = stringChin.substring(stringChin.length-500,stringChin.length)
                 stringChin = "";
             }
             stringChin += String.fromCodePoint(i);
-            characterDivChin.innerHTML = stringChin;
+        }
+        else {
+            break;
         }
     }
-    for(var j = 0; j < 4; j++){
+    characterDivChin.innerHTML = stringChin;
+    for (var x = 0; x < 4; x++) {
         if (j < 0xFF5A && eng) {
             j++;
             countEng++;
@@ -107,17 +105,13 @@ function draw() {
                     j = 0xFF21;
                     break;
             }
-            else{
-                break;
-            }
-            if (stringEng.length > 500) {
-                //stringEng = stringEng.substring(stringEng.length-500,stringEng.length)
-                //stringEng = "";
-            }
             stringEng += String.fromCodePoint(j);
-            characterDivEng.innerHTML = stringEng;
+        }
+        else {
+            break;
         }
     }
+    characterDivEng.innerHTML = stringEng;
 }
 
 function startEng() {
